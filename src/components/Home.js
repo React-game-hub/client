@@ -19,7 +19,7 @@ const Home = ({ user }) => {
           className="w-full bg-green-500 text-white py-2 rounded"
           onClick={() => navigate("/game2")} // Assuming you have a route for Game2
         >
-          Play Game 2
+          Play Sonic
         </button>
       </div>
     </div>

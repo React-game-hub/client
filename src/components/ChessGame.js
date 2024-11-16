@@ -7,8 +7,10 @@ import { useParams, useLocation, useNavigate } from "react-router-dom";
 import "./ChessGame.css";
 
 import io from "socket.io-client";
+const SOCKET_PORT = 5569;
+const LOCAL_IP = process.env.LOCAL_IP || "localhost";
 
-const socket = io("http://10.1.4.91:5569", {
+const socket = io(`http://${LOCAL_IP}:${SOCKET_PORT}`, {
   transports: ["websocket", "polling"],
   autoConnect: true,
 });
