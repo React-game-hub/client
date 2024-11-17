@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+// file App.js
+import React, { useState, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import GameRoom from "./components/GameRoom";
 import ChessGame from "./components/ChessGame";
-import SonicGame from "./components/SonicGame";
+const SonicGame = React.lazy(() => import("./components/SonicGame"));
 
 const App = () => {
   const [user, setUser] = useState(null); // Initialize user state
@@ -15,9 +16,16 @@ const App = () => {
         <Route path="/" element={<Login setUser={setUser} />} />
         <Route path="/home" element={<Home user={user} />} />
         <Route path="/room" element={<GameRoom user={user} />} />
-        <Route path="/game1/:roomCode" element={<ChessGame user={user} />} />
-        <Route path="/game1" element={<ChessGame user={user} />} />
-        <Route path="/game2" element={<SonicGame />} />
+        <Route path="/chess/:roomCode" element={<ChessGame user={user} />} />
+        <Route path="/chess" element={<ChessGame user={user} />} />
+        <Route
+          path="/sonic"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <SonicGame />
+            </Suspense>
+          }
+        />{" "}
       </Routes>
     </Router>
   );

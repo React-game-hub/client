@@ -1,5 +1,7 @@
 import kaplay from "kaplay";
 
+const gameContainer = document.getElementById("game-container");
+
 const k = kaplay({
   width: 1920,
   height: 1080,
@@ -14,6 +16,7 @@ const k = kaplay({
   },
   touchToMouse: true,
   debug: false,
+  root: gameContainer, // Attach canvas to specific container
 });
 
 export default k;
