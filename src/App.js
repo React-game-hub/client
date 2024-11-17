@@ -4,8 +4,7 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import GameRoom from "./components/GameRoom";
 import ChessGame from "./components/ChessGame";
-import AboutUs from "./components/about_us.js";
-// import LocalChessGame from "./LocalChessGame"; // Import your local chess game component
+import AboutUs from "./components/AboutUs"; // Correct import
 
 const App = () => {
   const [user, setUser] = useState(null); // Initialize user state
@@ -18,9 +17,11 @@ const App = () => {
         <Route path="/room" element={<GameRoom user={user} />} />
         <Route path="/chess/:roomCode" element={<ChessGame user={user} />} />
         <Route path="/chess" element={<ChessGame user={user} />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
     </Router>
   );
 };
 
 export default App;
+
