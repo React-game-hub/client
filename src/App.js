@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import GameRoom from "./components/GameRoom";
 import ChessGame from "./components/ChessGame";
+import AboutUs from "./components/about_us.js";
 // import LocalChessGame from "./LocalChessGame"; // Import your local chess game component
 
 const App = () => {
