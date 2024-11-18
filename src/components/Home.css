@@ -191,3 +191,38 @@ a {
 .logout-button:hover {
   background-color: #ff5252;
 }
+.footer {
+  background-color: #1f2937;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-link {
+  color: #9ca3af;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #a78bfa;
+}
+
+.copyright {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
