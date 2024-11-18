@@ -60,7 +60,7 @@ function ChessGame({ user }) {
   const [optionSquares, setOptionSquares] = useState({});
   const [boardOrientation, setBoardOrientation] = useState("white");
   const [moveHistory, setMoveHistory] = useState([]);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [gameOverState, setGameOverState] = useState({
     isOver: false,
     message: "",
@@ -411,7 +411,13 @@ function ChessGame({ user }) {
       />
     );
   }
+  const handleNavigateHome = () => {
+    navigate("/home");
+  };
 
+  const handleNavigateRoom = () => {
+    navigate("/room");
+  };
   return (
     <div className={`app ${isDarkMode ? "dark-mode" : ""}`}>
       {showConfetti && <ReactConfetti width={width} height={height} />}
@@ -427,9 +433,15 @@ function ChessGame({ user }) {
                   {opponent && <span>Opponent: {opponent}</span>}
                 </>
               ) : (
-                <span>Local Game</span>
+                <span className="local-indicator">Local</span>
               )}
             </div>
+            <button className="control-button" onClick={handleNavigateHome}>
+              🏠 Home
+            </button>
+            <button className="control-button" onClick={handleNavigateRoom}>
+              🔙 Room
+            </button>
             <button className="control-button" onClick={resetGame}>
               {isOnlineGame ? "Exit Game" : "↺ New Game"}
             </button>
@@ -519,9 +531,7 @@ function ChessGame({ user }) {
         onNewGame={resetGame}
         onExit={() => {
           setGameOverState({ isOver: false, message: "", winner: null });
-          if (isOnlineGame) {
-            navigate("/room");
-          }
+          navigate("/home");
         }}
       />
     </div>

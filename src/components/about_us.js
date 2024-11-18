@@ -1,8 +1,8 @@
 import React from "react";
 import "./about_us.css";
-import AniruddhaPic from "./aniruddha.jpg"; 
-import AdityaPic from "./aditya.jpg"; 
-import AmoghPic from "..amogh.jpg"; 
+import AniruddhaPic from "./images/aniruddha.jpg";
+import AdityaPic from "./images/aditya.jpg";
+import AmoghPic from "./images/amogh.jpg";
 
 const AboutUs = () => {
   return (
@@ -17,7 +17,9 @@ const AboutUs = () => {
         <h2>Aniruddha Joshi</h2>
         <p>
           <strong>Email:</strong>{" "}
-          <a href="mailto:joshianiruddha100@gmail.com">joshianiruddha100@gmail.com</a>
+          <a href="mailto:joshianiruddha100@gmail.com">
+            joshianiruddha100@gmail.com
+          </a>
         </p>
         <p>
           <strong>GitHub:</strong>{" "}
@@ -73,4 +75,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-

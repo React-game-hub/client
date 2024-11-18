@@ -5,7 +5,7 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import GameRoom from "./components/GameRoom";
 import ChessGame from "./components/ChessGame";
-import AboutUs from "./components/AboutUs"; // Correct import
+import AboutUs from "./components/about_us"; // Correct import
 const SonicGame = React.lazy(() => import("./components/SonicGame"));
 
 const App = () => {
@@ -20,15 +20,17 @@ const App = () => {
         <Route path="/chess/:roomCode" element={<ChessGame user={user} />} />
         <Route path="/chess" element={<ChessGame user={user} />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/sonic" element={
+        <Route
+          path="/sonic"
+          element={
             <Suspense fallback={<div>Loading...</div>}>
               <SonicGame />
             </Suspense>
-          }/>{" "}
+          }
+        />{" "}
       </Routes>
     </Router>
   );
 };
 
 export default App;
-

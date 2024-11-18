@@ -60,7 +60,17 @@ function SonicGame() {
   }, []);
 
   return (
-    <div id="game-container" style={{ width: "100vw", height: "100vh" }}></div>
+    <div
+      id="game-container"
+      style={{
+        width: "100vw",
+        height: "100vh",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        overflow: "hidden",
+      }}
+    ></div>
   );
 }
 
