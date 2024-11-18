@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Home.css";
-import chess_img from "./images/chess.jpg";
-import sonic_img from "./images/sonic.png";
-
+import chess_img from "./chess.jpg";
+import sonic_img from "./sonic.png";
 const games = [
   {
     id: 1,
@@ -29,6 +28,7 @@ const games = [
 
 function Home({ user }) {
   const navigate = useNavigate();
+
   const handleLogout = () => {
     user = null;
     localStorage.removeItem("username");
@@ -100,7 +100,6 @@ function Home({ user }) {
           ))}
         </div>
       </div>
-
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-links">
@@ -109,7 +108,7 @@ function Home({ user }) {
             </Link>
           </div>
           <div className="copyright">
-            © {new Date().getFullYear()} Gaming Portal. All rights reserved.
+            © {new Date().getFullYear()} Game Hub. All rights reserved.
           </div>
         </div>
       </footer>

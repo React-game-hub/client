@@ -123,7 +123,7 @@ function ChessGame({ user }) {
       }
       return null;
     },
-    [game]
+    [game],
   );
 
   const checkGameState = useCallback(
@@ -156,7 +156,7 @@ function ChessGame({ user }) {
         setGameOverState({ isOver: true, message: "Draw!", winner: null });
       }
     },
-    [findKingSquare, isOnlineGame, playerColor, user?.username, opponent]
+    [findKingSquare, isOnlineGame, playerColor, user?.username, opponent],
   );
   // Initialize online game
   useEffect(() => {
@@ -375,7 +375,7 @@ function ChessGame({ user }) {
       roomCode,
       gameStarted,
       playerColor,
-    ]
+    ],
   );
 
   function flipBoard() {

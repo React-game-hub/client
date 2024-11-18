@@ -76,7 +76,6 @@ const GameRoom = ({ user }) => {
   const handlePlayLocally = () => {
     navigate("/chess");
   };
-
   return (
     <div className="gameroom-app">
       <div className="game-container">

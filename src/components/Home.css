@@ -1,12 +1,7 @@
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #2c497f;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
+.home-app {
+  background-color: #111827;
+  min-height: 100vh;
+  color: white;
 }
 
 .container {
@@ -191,6 +186,7 @@ a {
 .logout-button:hover {
   background-color: #ff5252;
 }
+
 .footer {
   background-color: #1f2937;
   padding: 2rem 0;
@@ -205,24 +201,4 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.footer-link {
-  color: #9ca3af;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #a78bfa;
-}
-
-.copyright {
-  color: #6b7280;
-  font-size: 0.875rem;
 }

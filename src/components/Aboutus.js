@@ -9,7 +9,7 @@ const AboutUs = () => {
     <div className="about-us">
       <h1 className="title">About Us</h1>
       <p className="intro">
-        Welcome to our app! Meet the dedicated team behind this project:
+        Welcome to our Game Hub! Meet the dedicated team behind this project:
       </p>
 
       <div className="team-member">
