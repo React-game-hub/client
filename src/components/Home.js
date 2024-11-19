@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Home.css";
-import chess_img from "./chess.jpg";
-import sonic_img from "./sonic.png";
+import chess_img from "./images/chess.jpg";
+import sonic_img from "./images/sonic.png";
 const games = [
   {
     id: 1,
